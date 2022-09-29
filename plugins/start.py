@@ -33,7 +33,7 @@ from config import START_PIC, FLOOD, ADMIN
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
-    buttons = [[ InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink) ]]
+    buttons = [[ InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url='https://t.me/Sanaticsmovies') ]]
     text = "**𝚂𝙾𝚁𝚁𝚈 𝙳𝚄𝙳𝙴 𝚈𝙾𝚄𝚁 𝙽𝙾𝚃 𝙹𝙾𝙸𝙽𝙳 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 😔. 𝙿𝙻𝙴𝙰𝚂𝙴 𝙹𝙾𝙸𝙽 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 🙏 **"
     await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
            
@@ -44,12 +44,10 @@ async def start(client, message):
         await db.add_user(user.id)    
     await message.reply_photo(
        photo=START_PIC,
-       caption=f"""👋 Hai {user.mention} \n𝙸'𝚖 𝙰 𝚂𝚒𝚖𝚙𝚕𝚎 𝙵𝚒𝚕𝚎 𝚁𝚎𝚗𝚊𝚖𝚎+𝙵𝚒𝚕𝚎 𝚃𝚘 𝚅𝚒𝚍𝚎𝚘 𝙲𝚘𝚟𝚎𝚛𝚝𝚎𝚛 𝙱𝙾𝚃 𝚆𝚒𝚝𝚑 𝙿𝚎𝚛𝚖𝚊𝚗𝚎𝚗𝚝 𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕 & 𝙲𝚞𝚜𝚝𝚘𝚖 𝙲𝚊𝚙𝚝𝚒𝚘𝚗 𝚂𝚞𝚙𝚙𝚘𝚛𝚝! """,
+       caption=f"""🤘Hey buddy {user.mention}
+          <b> I am a fast renamer bot with permanent thumbnail support and video to file convertor bot with custom caption.""",
        reply_markup=InlineKeyboardMarkup( [[
-           InlineKeyboardButton("👼 𝙳𝙴𝚅𝚂 👼", callback_data='dev')
-           ],[
-           InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/PYRO_BOTZ'),
-           InlineKeyboardButton('🍂 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/PYRO_BOTZ_CHAT')
+           InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/Sanaticsmovies')
            ],[
            InlineKeyboardButton('🍃 𝙰𝙱𝙾𝚄𝚃', callback_data='about'),
            InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help')
@@ -91,12 +89,10 @@ async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
         await query.message.edit_text(
-            text=f"""👋 Hai {query.from_user.mention} \n𝙸'𝚖 𝙰 𝚂𝚒𝚖𝚙𝚕𝚎 𝙵𝚒𝚕𝚎 𝚁𝚎𝚗𝚊𝚖𝚎+𝙵𝚒𝚕𝚎 𝚃𝚘 𝚅𝚒𝚍𝚎𝚘 𝙲𝚘𝚟𝚎𝚛𝚝𝚎𝚛 𝙱𝙾𝚃 𝚆𝚒𝚝𝚑 𝙿𝚎𝚛𝚖𝚊𝚗𝚎𝚗𝚝 𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕 & 𝙲𝚞𝚜𝚝𝚘𝚖 𝙲𝚊𝚙𝚝𝚒𝚘𝚗 𝚂𝚞𝚙𝚙𝚘𝚛𝚝! """,
+            text=f"""🤘Hey buddy {query.from_user.mention} 
+            <b> I am a fast renamer bot with permanent thumbnail support and video to file convertor bot with custom caption.""",
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("👼 𝙳𝙴𝚅𝚂 👼", callback_data='dev')                
-                ],[
-                InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/PYRO_BOTZ'),
-                InlineKeyboardButton('🍂 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/PYRO_BOTZ_CHAT')
+                InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/PYRO_BOTZ')
                 ],[
                 InlineKeyboardButton('🍃 𝙰𝙱𝙾𝚄𝚃', callback_data='about'),
                 InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help')
@@ -106,14 +102,15 @@ async def cb_handler(client, query: CallbackQuery):
         return
     elif data == "help":
         await query.message.edit_text(
-            text=mr.HELP_TXT,
+            text=f"""Command list for sanatic bot
+            /start - bot alive cheking
+            /viewthumb - View Thumbnail
+            /delthumb - Delete Thumbnail
+            /set_caption - set a custom caption
+            /see_caption - see your custom caption
+            /del_caption - delete custom caption""",
             reply_markup=InlineKeyboardMarkup( [[
-               #⚠️ don't change source code & source link ⚠️ #
-               InlineKeyboardButton("❣️ 𝚂𝙾𝚄𝚁𝙲𝙴", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
-               ],[
-               InlineKeyboardButton("❤️‍🔥 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴  ❤️‍🔥", url='https://youtu.be/BiC66uFJsio')
-               ],[
-               InlineKeyboardButton("🔒 𝙲𝙻𝙾𝚂𝙴", callback_data = "close"),
+               #⚠️ don't change source code & source link ⚠️#
                InlineKeyboardButton("◀️ 𝙱𝙰𝙲𝙺", callback_data = "start")
                ]]
             )
