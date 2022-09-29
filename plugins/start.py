@@ -92,7 +92,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=f"""🤘Hey buddy {query.from_user.mention} 
             <b> I am a fast renamer bot with permanent thumbnail support and video to file convertor bot with custom caption.""",
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/PYRO_BOTZ')
+                InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/Sanaticsmovies')
                 ],[
                 InlineKeyboardButton('🍃 𝙰𝙱𝙾𝚄𝚃', callback_data='about'),
                 InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help')
@@ -117,7 +117,8 @@ async def cb_handler(client, query: CallbackQuery):
         )
     elif data == "about":
         await query.message.edit_text(
-            text=f"""Since 2022 company""",
+            text=f"""Since 2022 company
+            <b> ✮ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/sridhar_814>SD</a>""",
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup( [[
                #⚠️ don't change source code & source link ⚠️ #
