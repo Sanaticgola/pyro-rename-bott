@@ -103,12 +103,12 @@ async def cb_handler(client, query: CallbackQuery):
     elif data == "help":
         await query.message.edit_text(
             text=f"""Command list for sanatic bot
-            /start - bot alive cheking
-            /viewthumb - View Thumbnail
-            /delthumb - Delete Thumbnail
-            /set_caption - set a custom caption
-            /see_caption - see your custom caption
-            /del_caption - delete custom caption""",
+           <b> /start - bot alive cheking
+           <b> /viewthumb - View Thumbnail
+           <b> /delthumb - Delete Thumbnail
+           <b> /set_caption - set a custom caption
+           <b> /see_caption - see your custom caption
+           <b> /del_caption - delete custom caption""",
             reply_markup=InlineKeyboardMarkup( [[
                #⚠️ don't change source code & source link ⚠️#
                InlineKeyboardButton("◀️ 𝙱𝙰𝙲𝙺", callback_data = "start")
