@@ -90,7 +90,7 @@ async def cb_handler(client, query: CallbackQuery):
     if data == "start":
         await query.message.edit_text(
             text=f"""HEY ROMEO 🌀{query.from_user.mention} 
-            <b> I AM A FAST RENAMER BOT WITH PERMANENT THUMBNAIL SUPPORT AND VIDEO TO FILE CONVERTOR BOT WITH CUSTOM caption.""",
+            <b> I AM A FAST RENAMER BOT WITH PERMANENT THUMBNAIL SUPPORT AND DOCUMENT TO VIDEO CONVERTOR BOT WITH CUSTOM CAPTION.""",
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton('⭕ 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 ⭕', url='https://t.me/Sanaticsmovies')
                 ],[
@@ -117,8 +117,8 @@ async def cb_handler(client, query: CallbackQuery):
         )
     elif data == "about":
         await query.message.edit_text(
-            text=f"""Since 2022 company
-            <b> ✮ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/sridhar_814>SD</a>""",
+            text=f"""Since 2022 company Sanatic makes work smarter
+            <b> ✮ OWNER: <a href=https://t.me/souls55>Sanaticsmovies</a>""",
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup( [[
                #⚠️ don't change source code & source link ⚠️ #
